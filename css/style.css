@@ -50,6 +50,7 @@ h2 {
 }
 
 .slide-menu {
+    
     position: absolute;
     top: 3.5em;
     padding: 1em;
@@ -59,6 +60,7 @@ h2 {
     transform: translate3d(0, 0, 0);
     transition: transform 0.2s;
 }
+
 
 .slide-menu ul {
     list-style: none;
@@ -78,6 +80,7 @@ h2 {
 
 .menu-hidden .slide-menu {
     transform: translate3d(-12em, 0, 0);
+    
     transition: transform 0.2s;
 }
 
