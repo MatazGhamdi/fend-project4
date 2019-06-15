@@ -6,6 +6,6 @@ I used test suits to test multiple functions on the webpage. A test suite just c
 
 ## Why this Project?  
 
-** app.js ** - Is where the feeds load  
+**app.js** - Is where the feeds load  
 
-** jasmine/spec/feedreader.js ** - Is where the testing suits are. 
+**jasmine/spec/feedreader.js** - Is where the testing suits are. 

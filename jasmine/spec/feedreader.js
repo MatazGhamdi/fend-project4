@@ -9,7 +9,7 @@
  * to ensure they don't run until the DOM is ready.
  */
 $(function () {
-    
+
     /* This is our first test suite - a test suite just contains
     * a related set of tests. This suite is all about the RSS
     * feeds definitions, the allFeeds variable in our application.
@@ -90,30 +90,32 @@ $(function () {
     describe('New Feed Selection', function () {
 
         /* Test if content actually changed */
-
         var previousEntry;
         var newEntry;
+
         beforeEach(function (done) {
-            
-            
+
             // check new entry, index 0
             loadFeed(0, function () {
                 newEntry = $('.feed').find(allFeeds.name);
-                done();
+
+                //check index 1
+                loadFeed(1, function () {
+                    previousEntry = $('.feed').find(allFeeds.name);
+                    done();
+                })
+
             })
 
-            //check index 1
-            loadFeed(1, function () {
-                previousEntry = $('.feed').find(allFeeds.name);
-                done();
-            })
         })
-        
+
         it('Entry changed', function () {
             expect(newEntry).not.toBe(previousEntry);
         });
 
     });
 
+
+    
 
 }());
